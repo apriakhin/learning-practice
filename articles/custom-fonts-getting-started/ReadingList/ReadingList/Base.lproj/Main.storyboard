@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4nr-4Y-NVH">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Texturina.ttf">
+            <string>TexturinaRoman-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Book List View Controller-->
+        <scene sceneID="6dh-Jw-bgY">
+            <objects>
+                <viewController id="4nr-4Y-NVH" customClass="BookListViewController" customModule="ReadingList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sZ9-Z1-cxM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ray Wenderlich Books" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SF-aW-MOP">
+                                <rect key="frame" x="0.0" y="175" width="375" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flyingBook" translatesAutoresizingMaskIntoConstraints="NO" id="F3N-Tp-STc">
+                                <rect key="frame" x="137.66666666666666" y="50" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="7Ub-sA-FOg"/>
+                                    <constraint firstAttribute="width" secondItem="F3N-Tp-STc" secondAttribute="height" multiplier="1:1" id="X7k-WP-iBj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swift Apprentice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGc-K2-FUU">
+                                <rect key="frame" x="0.0" y="262" width="375" height="25"/>
+                                <fontDescription key="fontDescription" name="TexturinaRoman-Regular" family="Texturina" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mpo-eS-JUq">
+                                <rect key="frame" x="0.0" y="387" width="375" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="oFC-oE-eHE"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="Rcn-UT-LfQ" kind="embed" destinationCreationSelector="addSwiftUILabel:" id="I2G-Ed-POt"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HDH-oN-XoL"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="F3N-Tp-STc" firstAttribute="top" secondItem="HDH-oN-XoL" secondAttribute="top" id="DkQ-EL-tWZ"/>
+                            <constraint firstItem="2SF-aW-MOP" firstAttribute="leading" secondItem="HDH-oN-XoL" secondAttribute="leading" id="GFk-Dr-HgM"/>
+                            <constraint firstItem="Mpo-eS-JUq" firstAttribute="leading" secondItem="HDH-oN-XoL" secondAttribute="leading" id="Khb-XB-F8p"/>
+                            <constraint firstItem="Mpo-eS-JUq" firstAttribute="centerX" secondItem="HDH-oN-XoL" secondAttribute="centerX" id="PSE-ZA-agH"/>
+                            <constraint firstItem="JGc-K2-FUU" firstAttribute="leading" secondItem="HDH-oN-XoL" secondAttribute="leading" id="QaT-uZ-hRd"/>
+                            <constraint firstItem="JGc-K2-FUU" firstAttribute="top" secondItem="2SF-aW-MOP" secondAttribute="bottom" constant="50" id="Qfz-Ig-Q1T"/>
+                            <constraint firstItem="Mpo-eS-JUq" firstAttribute="top" secondItem="JGc-K2-FUU" secondAttribute="bottom" constant="100" id="aHr-PC-5Fp"/>
+                            <constraint firstItem="HDH-oN-XoL" firstAttribute="trailing" secondItem="2SF-aW-MOP" secondAttribute="trailing" id="glG-HM-BJJ"/>
+                            <constraint firstItem="HDH-oN-XoL" firstAttribute="trailing" secondItem="JGc-K2-FUU" secondAttribute="trailing" id="jYF-Id-v2y"/>
+                            <constraint firstItem="2SF-aW-MOP" firstAttribute="top" secondItem="F3N-Tp-STc" secondAttribute="bottom" constant="25" id="rtd-tx-120"/>
+                            <constraint firstItem="F3N-Tp-STc" firstAttribute="centerX" secondItem="HDH-oN-XoL" secondAttribute="centerX" id="uEa-hz-t8p"/>
+                            <constraint firstItem="HDH-oN-XoL" firstAttribute="trailing" secondItem="Mpo-eS-JUq" secondAttribute="trailing" id="uGT-v7-7zY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bookHeightConstraint" destination="7Ub-sA-FOg" id="M62-OU-hiX"/>
+                        <outlet property="firstBookLabel" destination="JGc-K2-FUU" id="V4Q-zv-ZUN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gUp-RQ-UIg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-129" y="-51"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="Rd5-qO-xve">
+            <objects>
+                <hostingController id="Rcn-UT-LfQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wz1-U5-984" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="696" y="-52"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="flyingBook" width="100" height="100"/>
+    </resources>
+</document>
